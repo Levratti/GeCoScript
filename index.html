@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: auto;
+            width: 40%;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+        }
+
+        input[type=button],
+        input[type=submit],
+        input[type=reset] {
+            background-color: #04AA6D;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+
+        }
+
+        input[type=reset] {
+            background-color: #aa0404;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Valori Duplicati</h2>
+
+    <p><strong>Descrizzione:</strong>Elimina valori duplicati, cioè presenti nelle due aree di testo, quindi dopo il confronto rimangono solo i valori univoci.</p>
+
+    <div>
+        <strong>Dati Enel:</strong>
+        <textarea id="texArea_1"></textarea>
+        <strong>Dati GeCo:</strong>
+        <textarea id="texArea_2"></textarea>
+        <input type="reset" onclick="Reset()" value="Cancella">
+        <input type="button" onclick="onClick()" value="Conftronta">
+        <p><strong>Valori univoci:</strong>:</p>
+        <div>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        // diff between just two arrays:
+        function arrayDiff(a, b) {
+            var arrays = Array.prototype.slice.call(arguments);
+            var diff = {
+                allDiff: [],
+                list_A: [],
+                list_B: [],
+            };
+
+            arrays.forEach(function (arr, i) {
+                var other = i === 1 ? a : b;
+                arr.forEach(function (x) {
+                    if (other.indexOf(x) === -1) {
+                        diff.allDiff.push(x);
+
+                        if (i == 0) {
+                            diff.list_A.push(x);
+                        }
+                        if (i == 1) {
+                            diff.list_B.push(x);
+                        }
+                    }
+                });
+            })
+
+            return diff;
+        }
+
+        function onClick(e) {
+            var array_A = document.querySelector("#texArea_1").value.split('\n');
+            var array_B = document.querySelector("#texArea_2").value.split('\n');
+
+            var res = arrayDiff(array_A, array_B);
+
+            console.log(res);
+            document.querySelector("#result").innerHTML = res.allDiff.join("<br />");
+
+            document.querySelector("#texArea_1").value = res.list_A.join('\n');
+            document.querySelector("#texArea_2").value = res.list_B.join('\n');
+        }
+
+        function Reset(e) {
+            document.querySelector("#texArea_1").value = "";
+            document.querySelector("#texArea_2").value = "";
+            document.querySelector("#result").innerHTML = "";
+        }
+    </script>
+
+</body>
+
+</html>
