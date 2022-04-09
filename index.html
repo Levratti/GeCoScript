@@ -129,7 +129,7 @@
             var res = arrayDiff(array_A, array_B);
 
             console.log(res);
-            document.querySelector("#result").innerHTML = res.allDiff.join('\n');
+            document.querySelector("#result").value = res.allDiff.join('\n');
 
             document.querySelector("#texArea_1").value = res.list_A.join('\n');
             document.querySelector("#texArea_2").value = res.list_B.join('\n');
@@ -138,7 +138,7 @@
         function Reset(e) {
             document.querySelector("#texArea_1").value = "";
             document.querySelector("#texArea_2").value = "";
-            document.querySelector("#result").innerHTML = "";
+            document.querySelector("#result").value = "";
         }
     </script>
 </body>
