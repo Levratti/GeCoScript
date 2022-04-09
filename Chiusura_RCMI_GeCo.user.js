@@ -26,7 +26,7 @@
         try {
             var checkClouse = document.querySelector("#fieldsets-container > fieldset:nth-child(2) > div.form-row.field-stato_esecuzione_display_html > div > div").textContent;
             if (checkClouse != "Eseguita") {
-                alert("Errore\nVerificare se la pratica risulta eseguita.");
+                alert("Errore\nLa praticha risulta aperta,\nper creare la chiusra in BO bisogna che la pratica risultasse eseguita.");
                 return
             }
 
