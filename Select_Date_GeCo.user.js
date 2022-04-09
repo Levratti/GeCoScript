@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Select Date GeCo
-// @namespace    https://github.com/gestionece/scriptGeCo
+// @namespace    https://github.com/Levratti/GeCoScript
 // @version      0.3
-// @description  Comodo calendario per scegliere la data
+// @description  Comodo calendario per scegliere la data di assegnazione
 // @author       Ruslan Dzyuba(Trorker)
 // @match        https://geco.impresalevratti.it/admin/backend/pratica/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=impresalevratti.it
 // @grant        none
 // ==/UserScript==
 
