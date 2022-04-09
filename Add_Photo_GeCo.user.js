@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Add Photo GeCo
-// @namespace    https://github.com/gestionece/scriptGeCo
+// @namespace    https://github.com/Levratti/GeCoScript
 // @version      0.4
 // @description  Link per caricare imagini
 // @author       Ruslan Dzyuba(Trorker)
 // @match        https://geco.impresalevratti.it/admin/backend/pratica*
-// @icon         https://geco.impresalevratti.it/media/admin-interface/logo/gecko_icon.png
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=geco.impresalevratti.it
 // @grant        none
 // ==/UserScript==
 
