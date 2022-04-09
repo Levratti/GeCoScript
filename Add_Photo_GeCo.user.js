@@ -5,7 +5,7 @@
 // @description  Link per caricare imagini
 // @author       Ruslan Dzyuba(Trorker)
 // @match        https://geco.impresalevratti.it/admin/backend/pratica*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=geco.impresalevratti.it
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=impresalevratti.it
 // @grant        none
 // ==/UserScript==
 
