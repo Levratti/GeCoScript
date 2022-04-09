@@ -3,63 +3,93 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Valori Duplicati</title>
 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
+
     <style>
-        body {
-            margin: auto;
-            width: 40%;
+        *:focus {
+            outline: none;
+        }
+
+        .bg {
+            background: url(https://picsum.photos/1920/1080?random&blur=1&grayscale) no-repeat center fixed;
+            background-size: cover;
+
+            height: 100vh;
         }
 
         textarea {
             width: 100%;
-            height: 200px;
-            padding: 12px 20px;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
+            height: 350px;
             background-color: #f8f8f8;
             font-size: 16px;
             resize: none;
-        }
-
-        input[type=button],
-        input[type=submit],
-        input[type=reset] {
-            background-color: #04AA6D;
-            border: none;
-            border-radius: 4px;
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            margin: 4px 2px;
-            cursor: pointer;
-
-        }
-
-        input[type=reset] {
-            background-color: #aa0404;
+            opacity: 100%;
         }
     </style>
 </head>
 
-<body>
-    <h2>Valori Duplicati</h2>
-
-    <p><strong>Descrizzione:</strong>Elimina valori duplicati, cioè presenti nelle due aree di testo, quindi dopo il confronto rimangono solo i valori univoci.</p>
-
-    <div>
-        <strong>Dati Enel:</strong>
-        <textarea id="texArea_1"></textarea>
-        <strong>Dati GeCo:</strong>
-        <textarea id="texArea_2"></textarea>
-        <input type="reset" onclick="Reset()" value="Cancella">
-        <input type="button" onclick="onClick()" value="Confronta">
-        <p><strong>Valori univoci:</strong>:</p>
-        <div>
-            <p id="result"></p>
+<body class="bg">
+    <div class="w3-container">
+        <div class="w3-row w3-margin-top w3-margin-bottom">
+            <div class="w3-col l2 m1">
+                <p></p>
+            </div>
+            <div class="w3-col l8 m10 w3-round-xlarge" style="background-color: white;">
+                <div class="w3-row">
+                    <h2 class="w3-center">Valori Duplicati</h2>
+                    <div class="w3-col l7 m7 w3-container w3-margin-bottom">
+                        <div class="w3-card-4 w3-container w3-round-xlarge">
+                            <div class="w3-row w3-margin-bottom">
+                                <div class="w3-col l6 m6 w3-container">
+                                    <div class="w3-row w3-margin-top">
+                                        <label class="w3-text-blue"><b>Dati Enel:</b></label>
+                                        <textarea id="texArea_1" class="w3-input w3-border w3-card-4 w3-round-xlarge" id="d_s"
+                                            type="date"></textarea>
+                                    </div>
+                                </div>
+                                <div class="w3-col l6 m6 w3-container">
+                                    <div class="w3-row w3-margin-top">
+                                        <label class="w3-text-blue"><b>Dati GeCo:</b></label>
+                                        <textarea id="texArea_2" class="w3-input w3-border w3-card-4 w3-round-xlarge" id="d_s"
+                                            type="date"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-row w3-margin-top w3-center">
+                                <div class="w3-col s6 m12 l6 w3-container w3-center w3-margin-bottom">
+                                    <button class="w3-button w3-block w3-red w3-round-xlarge"
+                                        onclick="Reset();">Cancella</button>
+                                </div>
+                                <div class="w3-col s6 m12 l6 w3-container w3-center w3-margin-bottom">
+                                    <button class="w3-button w3-block w3-green w3-round-xlarge"
+                                        onclick="onClick();">Confronta</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-col l5 m5 w3-container">
+                        <div class="w3-card-4 w3-container w3-round-xlarge">
+                            <div class="w3-row w3-margin-top w3-margin-bottom">
+                                <label class="w3-text-blue"><b>Risultato:</b></label>
+                                <textarea id="result" class="w3-input w3-border w3-card-4 w3-round-xlarge" id="d_s"
+                                    type="date"></textarea>
+                            </div>
+                            <div class="w3-col s12 m12 l12 w3-center w3-margin-bottom">
+                                <button class="w3-button w3-block w3-red w3-round-xlarge"
+                                    onclick="Reset();">Cancella</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l2 m1">
+                <p></p>
+            </div>
         </div>
     </div>
 
@@ -99,7 +129,7 @@
             var res = arrayDiff(array_A, array_B);
 
             console.log(res);
-            document.querySelector("#result").innerHTML = res.allDiff.join("<br />");
+            document.querySelector("#result").innerHTML = res.allDiff.join('\n');
 
             document.querySelector("#texArea_1").value = res.list_A.join('\n');
             document.querySelector("#texArea_2").value = res.list_B.join('\n');
@@ -111,7 +141,6 @@
             document.querySelector("#result").innerHTML = "";
         }
     </script>
-
 </body>
 
 </html>
