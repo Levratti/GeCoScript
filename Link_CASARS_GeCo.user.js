@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Link CASARS GeCo
 // @namespace    https://github.com/Levratti/GeCoScript
-// @version      0.2
+// @version      0.3
 // @description  Visualizza sè il CASARS è stato spedito
 // @author       Ruslan Dzyuba(Trorker)
 // @match        https://geco.impresalevratti.it/admin/backend/reso/*/change/*
