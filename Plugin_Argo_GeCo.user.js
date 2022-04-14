@@ -5,7 +5,7 @@
 // @description  Plugin per scaricare in automatico il file CP da GeCo
 // @author       Ruslan Dzyuba(Trorker)
 // @match        https://geco.impresalevratti.it/admin/backend/pallet/?q=*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=impresalevratti.it_DELETE
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=impresalevratti.it
 // @grant        none
 // ==/UserScript==
 
