@@ -47,9 +47,9 @@
             var a = window.open('','','width=400,height=250');
             a.document.open("text/html");
             a.document.write('<html><head><title>');
-            a.document.write('EnelTel');
+            a.document.write('Chiusura RCMI GeCo');
             a.document.write('</title>');
-            a.document.write('</head><body">');
+            a.document.write('</head><body style="font-size: 0.95em;">');
             a.document.write("------------------------------------------------------------------<br>");
             a.document.write('<b>Richiesta chiusura RCMI ENELTEL ' + eneltel + '</b><br>');
             a.document.write('<b>Contratto: </b>' + contratto + '<br>');
