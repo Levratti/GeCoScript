@@ -4,7 +4,7 @@
 // @version      0.2
 // @description  Visualizza sè il CASARS è stato spedito
 // @author       Ruslan Dzyuba(Trorker)
-// @match        https://geco.impresalevratti.it/admin/backend/pratica/*/change/*
+// @match        https://geco.impresalevratti.it/admin/backend/reso/*/change/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=impresalevratti.it
 // @grant        none
 // ==/UserScript==
